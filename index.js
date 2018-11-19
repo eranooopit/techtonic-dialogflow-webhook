@@ -15,21 +15,14 @@ restService.use(bodyParser.json());
 
 restService.post("/coverage", function(req, res) {
   var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.client
-      ? req.body.result.parameters.client
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.client
+      ? req.body.queryResult.parameters.client
       : "Seems like some problem. Please Try again..";
   return res.json({
     fulfillmentText: speech,
-    fulfillmentMessages: [
-      {
-        text: {
-          text: [
-            speech
-          ]
-        }
-      }],
+    fulfillmentMessages: [{text: { text: [speech]}}],
     source: "techtonic-dialogflow-webhook"
   });
 });
