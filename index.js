@@ -29,7 +29,7 @@ restService.post("/coverage", function(req, res) {
             speech
           ]
         }
-      },
+      }],
     source: "techtonic-dialogflow-webhook"
   });
 });
