@@ -1,6 +1,6 @@
 {
   "name": "techtonic-dialogflow-webhook",
-  "description": "",
-  "repository": "",
+  "description": "Techtonic Dialogflow Webhook",
+  "repository": "https://github.com/eranooopit/techtonic-dialogflow-webhook.git",
   "keywords": ["api.ai", "dialogflow", "natural language"]
 }
