@@ -19,7 +19,7 @@ restService.use(bodyParser.json());
 
 restService.get('/coverage/Poll.json', function (req, res) {
     let isAnotherRequest = isNewRequest;
-    if(isAnotherRequest && chatbotInput.length !== 0){
+    if(isAnotherRequest && (chatbotInput.length === 0 || chatbotInput[0] || chatbotInput[0] === null){
         isNewRequest = false;
     }
     return res.json({
